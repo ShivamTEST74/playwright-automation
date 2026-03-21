@@ -13,6 +13,6 @@ export class AdminPage
     {
         await this.adminMenu.click()
         await expect(this.adminPageTitle).toBeVisible()
-        await page.waitForTimeout(5000);
+       
     }
 }
