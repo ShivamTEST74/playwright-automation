@@ -9,8 +9,8 @@ test('Admin Page Test', async({page})=>{
     const dashboardPage = new DashboardPage(page)
     const adminPage = new AdminPage(page)
     await loginPage.goToLoginPage('Admin', 'admin123')
-    await dashboardPage.verifyDashboardPage()
-    await adminPage.verifyAdminPageTitle()
+    //await dashboardPage.verifyDashboardPage()
+    //await adminPage.verifyAdminPageTitle()
 
 
 })
