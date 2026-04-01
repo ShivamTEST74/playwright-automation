@@ -6,11 +6,19 @@ export default defineConfig({
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
 
-  // ✅ Retry added (local + CI dono ke liye)
-  retries: 1,   // 👈 change here (earlier only CI me tha)
+  // ✅ Retry added
+  retries: 1,
 
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
+
+  // ✅ Global Test Timeout (NEW)
+  timeout: 60000, // 👉 60 sec for each test
+
+  // ✅ Global Expect Timeout (NEW)
+  expect: {
+    timeout: 10000, // 👉 10 sec for assertions
+  },
 
   use: {
     trace: 'on-first-retry',
@@ -18,6 +26,9 @@ export default defineConfig({
     // ✅ Screenshot & Video
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+
+    // ✅ Action Timeout (NEW)
+    actionTimeout: 30000, // 👉 30 sec for click, fill etc.
   },
 
   projects: [

@@ -12,6 +12,7 @@ test('Admin Page Test', async({page})=>{
     await loginPage.login('Admin', 'admin123')
     await dashboardPage.verifyDashboardPage()
     await adminPage.verifyAdminPageTitle()
+    
 
 
 })

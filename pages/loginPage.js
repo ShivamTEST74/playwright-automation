@@ -8,14 +8,19 @@ export class LoginPage
         this.username = page.getByPlaceholder('Username')
         this.password = page.getByPlaceholder('Password')
         this.loginButton = page.getByRole('button', {name:'Login'}) 
+        this.loginPageImage = page.getByRole('img', { name: 'company-branding' })
+        
     }
     async goToLoginPage()
     {
         await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+        await expect(this.loginPageImage).toBeVisible()
     }
+
 
     async login(username, password)
     {
+        
         await this.username.fill(username)
         await this.password.fill(password)
         await this.loginButton.click()
