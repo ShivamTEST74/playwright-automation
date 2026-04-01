@@ -22,5 +22,11 @@
             console.error("JavaScript error:", error);
         }
     </script>
+ // Alert popup
+            alert("JavaScript is running correctly!");
+        } catch (error) {
+            console.error("JavaScript error:", error);
+        }
+    </script>
 </body>
 </html>
