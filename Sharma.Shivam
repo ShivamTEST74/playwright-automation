@@ -1,0 +1,34 @@
+Shivam Sharma edits
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Test</title>
+</head>
+<body>
+    <h1>JavaScript Test Page</h1>
+
+    <p id="demo">If JavaScript works, this text will change.</p>
+
+    <script>
+        try {
+            // Simple test: change the text content
+            of the document.getElementById("demo").textContent = "✅ JavaScript is working!";
+
+            // Log to console
+            console.log("JavaScript test successful.");
+
+            // Alert popup
+            alert("JavaScript is running correctly!");
+        } catch (error) {
+            console.error("JavaScript error:", error);
+        }
+    </script>
+ // Alert popup
+            alert("JavaScript is running correctly!");
+        } catch (error) {
+            console.error("JavaScript error:", error);
+        }
+    </script>
+</body>
+</html>
