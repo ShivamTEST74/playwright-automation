@@ -32,10 +32,14 @@ export class AdminPage
         await this.userRoleDropdown.click()
         await this.selectDropDownValueAdmin.click()
         await this.employeeName.fill('Shivam')
+        await expect(this.employeeName).toHaveValue('Shivam')
         await this.statusDropdown.click()
         await this.selectStatusEnabled.click()
         await this.userName.fill('NewUserName')
+        //await expect(this.userName).toHaveValue('NewUserName')
         await this.password.fill('NewUserPassword123')
+        await expect(this.password).toHaveValue('NewUserPassword123')
+        await expect(this.saveButton).toBeEnabled()
         await this.saveButton.click()
 
     }
